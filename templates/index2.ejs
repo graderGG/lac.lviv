@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <title>Архітектура</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<%- include('sub/head.ejs') %>
+<body>
+<%- include('sub/indexHeader.ejs') %>
+<ul>
+    <% for (let i = 0; i < types.length; i++) { %>
+        <div class="types">
+            <br>
+            <li>
+                <a href="/list/<%= types[i].id %>">
+                    <%= types[i].typeName %>
+                </a>
+            </li>
+        </div>
+    <% } %>
+</ul>
+</body>
+</html>
